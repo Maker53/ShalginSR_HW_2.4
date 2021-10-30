@@ -14,15 +14,20 @@ class LoginViewController: UIViewController {
     @IBOutlet var userPasswordTextField: UITextField!
     
     // Private constants
-    private let userName = "User"
-    private let userPassword = "Password"
+    private let userData: UserData = UserData()
     
     // Send userName from LoginViewController to WelcomeViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
-        welcomeViewController.userName = userName
+        let tabBarController = segue.destination as? UITabBarController
+        
+        guard let viewControllers = tabBarController?.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeViewController = viewController as? WelcomeViewController {
+                welcomeViewController.userName = userData.name
+            }
+        }
     }
-    
     
     @IBAction func logInButton() {
         
@@ -34,7 +39,7 @@ class LoginViewController: UIViewController {
               }
         
         //Check correctly input userName and password
-        guard inputUserName == userName, inputUserPassword == userPassword else {
+        guard inputUserName == userData.login, inputUserPassword == userData.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password")
@@ -45,8 +50,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func userForgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Ooops! \u{1F628}", message: "Your name is \(userName)")
-        : showAlert(title: "Ooops! \u{1F628}", message: "Your password is \(userPassword)")
+        ? showAlert(title: "Ooops! \u{1F628}", message: "Your name is \(userData.login)")
+        : showAlert(title: "Ooops! \u{1F628}", message: "Your password is \(userData.password)")
     }
     
     override func viewDidLoad() {
@@ -99,3 +104,4 @@ extension LoginViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
 }
+
