@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     // Send userName from LoginViewController to WelcomeViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeViewController = segue.destination as? WelcomeViewController else { return }
-        welcomeViewController.userName = userNameTextField.text
+        welcomeViewController.userName = userName
     }
     
     

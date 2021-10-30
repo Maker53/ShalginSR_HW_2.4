@@ -12,7 +12,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var helloLabel: UILabel!
     @IBOutlet var emodjiLablel: UILabel!
     
-    var userName: String!
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

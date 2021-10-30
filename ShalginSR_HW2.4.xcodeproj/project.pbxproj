@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		850D74F52728645E00108269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D74F42728645E00108269 /* AppDelegate.swift */; };
 		850D74F72728645E00108269 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D74F62728645E00108269 /* SceneDelegate.swift */; };
-		850D74F92728645E00108269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D74F82728645E00108269 /* ViewController.swift */; };
-		850D74FC2728645E00108269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850D74FA2728645E00108269 /* Main.storyboard */; };
 		850D74FE2728646400108269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850D74FD2728646400108269 /* Assets.xcassets */; };
 		850D75012728646400108269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850D74FF2728646400108269 /* LaunchScreen.storyboard */; };
 		850D75092728691F00108269 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D75082728691F00108269 /* WelcomeViewController.swift */; };
 		850D750B27286A0000108269 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D750A27286A0000108269 /* LoginViewController.swift */; };
+		85E4F36B272D26FC000B9302 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4F36A272D26FC000B9302 /* UserProfileViewController.swift */; };
+		85E4F36D272D3136000B9302 /* ListOfFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4F36C272D3136000B9302 /* ListOfFriendsViewController.swift */; };
+		85E4F373272D3A08000B9302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4F371272D3A08000B9302 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		850D74F12728645E00108269 /* ShalginSR_HW2.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShalginSR_HW2.3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		850D74F12728645E00108269 /* ShalginSR_HW2.4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShalginSR_HW2.4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850D74F42728645E00108269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		850D74F62728645E00108269 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		850D74F82728645E00108269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		850D74FB2728645E00108269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		850D74FD2728646400108269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850D75002728646400108269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850D75022728646400108269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850D75082728691F00108269 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		850D750A27286A0000108269 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		85E4F36A272D26FC000B9302 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		85E4F36C272D3136000B9302 /* ListOfFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFriendsViewController.swift; sourceTree = "<group>"; };
+		85E4F372272D3A08000B9302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ShalginSR_HW2.4/Storyboards/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +46,7 @@
 		850D74E82728645E00108269 = {
 			isa = PBXGroup;
 			children = (
-				850D74F32728645E00108269 /* ShalginSR_HW2.3 */,
+				850D74F32728645E00108269 /* ShalginSR_HW2.4 */,
 				850D74F22728645E00108269 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,33 +54,66 @@
 		850D74F22728645E00108269 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				850D74F12728645E00108269 /* ShalginSR_HW2.3.app */,
+				850D74F12728645E00108269 /* ShalginSR_HW2.4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		850D74F32728645E00108269 /* ShalginSR_HW2.3 */ = {
+		850D74F32728645E00108269 /* ShalginSR_HW2.4 */ = {
+			isa = PBXGroup;
+			children = (
+				85E4F366272D2329000B9302 /* ViewControllers */,
+				85E4F367272D233A000B9302 /* Storyboards */,
+				85E4F368272D242B000B9302 /* Resources */,
+				85E4F369272D2438000B9302 /* Configs */,
+				850D74FF2728646400108269 /* LaunchScreen.storyboard */,
+			);
+			path = ShalginSR_HW2.4;
+			sourceTree = "<group>";
+		};
+		85E4F366272D2329000B9302 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				850D75082728691F00108269 /* WelcomeViewController.swift */,
+				850D750A27286A0000108269 /* LoginViewController.swift */,
+				85E4F36A272D26FC000B9302 /* UserProfileViewController.swift */,
+				85E4F36C272D3136000B9302 /* ListOfFriendsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		85E4F367272D233A000B9302 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85E4F371272D3A08000B9302 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		85E4F368272D242B000B9302 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				850D74FD2728646400108269 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		85E4F369272D2438000B9302 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
 				850D74F42728645E00108269 /* AppDelegate.swift */,
 				850D74F62728645E00108269 /* SceneDelegate.swift */,
-				850D74F82728645E00108269 /* ViewController.swift */,
-				850D74FA2728645E00108269 /* Main.storyboard */,
-				850D750A27286A0000108269 /* LoginViewController.swift */,
-				850D74FD2728646400108269 /* Assets.xcassets */,
-				850D74FF2728646400108269 /* LaunchScreen.storyboard */,
 				850D75022728646400108269 /* Info.plist */,
 			);
-			path = ShalginSR_HW2.3;
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		850D74F02728645E00108269 /* ShalginSR_HW2.3 */ = {
+		850D74F02728645E00108269 /* ShalginSR_HW2.4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 850D75052728646400108269 /* Build configuration list for PBXNativeTarget "ShalginSR_HW2.3" */;
+			buildConfigurationList = 850D75052728646400108269 /* Build configuration list for PBXNativeTarget "ShalginSR_HW2.4" */;
 			buildPhases = (
 				850D74ED2728645E00108269 /* Sources */,
 				850D74EE2728645E00108269 /* Frameworks */,
@@ -88,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = ShalginSR_HW2.3;
+			name = ShalginSR_HW2.4;
 			productName = ShalginSR_HW2.3;
-			productReference = 850D74F12728645E00108269 /* ShalginSR_HW2.3.app */;
+			productReference = 850D74F12728645E00108269 /* ShalginSR_HW2.4.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 850D74EC2728645E00108269 /* Build configuration list for PBXProject "ShalginSR_HW2.3" */;
+			buildConfigurationList = 850D74EC2728645E00108269 /* Build configuration list for PBXProject "ShalginSR_HW2.4" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				850D74F02728645E00108269 /* ShalginSR_HW2.3 */,
+				850D74F02728645E00108269 /* ShalginSR_HW2.4 */,
 			);
 		};
 /* End PBXProject section */
@@ -131,9 +166,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E4F373272D3A08000B9302 /* Main.storyboard in Resources */,
 				850D75012728646400108269 /* LaunchScreen.storyboard in Resources */,
 				850D74FE2728646400108269 /* Assets.xcassets in Resources */,
-				850D74FC2728645E00108269 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850D74F92728645E00108269 /* ViewController.swift in Sources */,
 				850D75092728691F00108269 /* WelcomeViewController.swift in Sources */,
+				85E4F36B272D26FC000B9302 /* UserProfileViewController.swift in Sources */,
 				850D74F52728645E00108269 /* AppDelegate.swift in Sources */,
+				85E4F36D272D3136000B9302 /* ListOfFriendsViewController.swift in Sources */,
 				850D750B27286A0000108269 /* LoginViewController.swift in Sources */,
 				850D74F72728645E00108269 /* SceneDelegate.swift in Sources */,
 			);
@@ -155,20 +191,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		850D74FA2728645E00108269 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				850D74FB2728645E00108269 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		850D74FF2728646400108269 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				850D75002728646400108269 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		85E4F371272D3A08000B9302 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E4F372272D3A08000B9302 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -299,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShalginSR_HW2.3/Info.plist;
+				INFOPLIST_FILE = ShalginSR_HW2.4/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShalginSR_HW2.3/Info.plist;
+				INFOPLIST_FILE = ShalginSR_HW2.4/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -351,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		850D74EC2728645E00108269 /* Build configuration list for PBXProject "ShalginSR_HW2.3" */ = {
+		850D74EC2728645E00108269 /* Build configuration list for PBXProject "ShalginSR_HW2.4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				850D75032728646400108269 /* Debug */,
@@ -360,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		850D75052728646400108269 /* Build configuration list for PBXNativeTarget "ShalginSR_HW2.3" */ = {
+		850D75052728646400108269 /* Build configuration list for PBXNativeTarget "ShalginSR_HW2.4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				850D75062728646400108269 /* Debug */,
