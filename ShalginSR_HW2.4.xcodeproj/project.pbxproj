@@ -16,6 +16,7 @@
 		85E4F36B272D26FC000B9302 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4F36A272D26FC000B9302 /* UserProfileViewController.swift */; };
 		85E4F36D272D3136000B9302 /* ListOfFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4F36C272D3136000B9302 /* ListOfFriendsViewController.swift */; };
 		85E4F373272D3A08000B9302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E4F371272D3A08000B9302 /* Main.storyboard */; };
+		85EE3BB1272E7EE5006E61FC /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE3BB0272E7EE5006E61FC /* PhotoAlbumViewController.swift */; };
 		85F3EDC8272D49B300170968 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F3EDC7272D49B200170968 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		85E4F36A272D26FC000B9302 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		85E4F36C272D3136000B9302 /* ListOfFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFriendsViewController.swift; sourceTree = "<group>"; };
 		85E4F372272D3A08000B9302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ShalginSR_HW2.4/Storyboards/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85EE3BB0272E7EE5006E61FC /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		85F3EDC7272D49B200170968 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				850D750A27286A0000108269 /* LoginViewController.swift */,
 				85E4F36A272D26FC000B9302 /* UserProfileViewController.swift */,
 				85E4F36C272D3136000B9302 /* ListOfFriendsViewController.swift */,
+				85EE3BB0272E7EE5006E61FC /* PhotoAlbumViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				850D75092728691F00108269 /* WelcomeViewController.swift in Sources */,
 				85E4F36B272D26FC000B9302 /* UserProfileViewController.swift in Sources */,
 				85F3EDC8272D49B300170968 /* UserData.swift in Sources */,
+				85EE3BB1272E7EE5006E61FC /* PhotoAlbumViewController.swift in Sources */,
 				850D74F52728645E00108269 /* AppDelegate.swift in Sources */,
 				85E4F36D272D3136000B9302 /* ListOfFriendsViewController.swift in Sources */,
 				850D750B27286A0000108269 /* LoginViewController.swift in Sources */,

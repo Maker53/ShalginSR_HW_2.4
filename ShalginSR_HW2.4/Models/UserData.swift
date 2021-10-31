@@ -12,9 +12,13 @@ struct UserData {
     let name = "Torax"
     let surname = "Shalgin"
     let age = "3 years"
-    let imageName = "UserPhoto"
+    
     let login = "ToraxTheDog"
     let password = "Bones"
+    
+    let imageName2 = "UserPhoto2"
+    let imageName3 = "UserPhoto3"
+    let imageName1 = "UserPhoto"
 }
 
 struct FriendsList {

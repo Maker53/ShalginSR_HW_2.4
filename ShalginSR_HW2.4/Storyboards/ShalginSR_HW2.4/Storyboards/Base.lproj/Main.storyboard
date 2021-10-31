@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ob-hC-MyK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ob-hC-MyK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,8 +26,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emodji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE4-yQ-fbF">
-                                        <rect key="frame" x="89" y="80" width="116.5" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦴" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE4-yQ-fbF">
+                                        <rect key="frame" x="124.5" y="80" width="45" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWy-5x-LLE">
-                                <rect key="frame" x="90" y="703" width="234" height="50"/>
+                                <rect key="frame" x="90" y="723" width="234" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="GCW-Jo-eaK" firstAttribute="trailing" secondItem="nuZ-9H-zDD" secondAttribute="trailing" constant="60" id="NTp-eq-If5"/>
                             <constraint firstItem="nuZ-9H-zDD" firstAttribute="leading" secondItem="GCW-Jo-eaK" secondAttribute="leading" constant="60" id="Q70-sf-jbX"/>
                             <constraint firstItem="GCW-Jo-eaK" firstAttribute="trailing" secondItem="FWy-5x-LLE" secondAttribute="trailing" constant="90" id="ayz-cY-0HS"/>
-                            <constraint firstItem="GCW-Jo-eaK" firstAttribute="bottom" secondItem="FWy-5x-LLE" secondAttribute="bottom" constant="60" id="yeA-TS-gjX"/>
+                            <constraint firstItem="GCW-Jo-eaK" firstAttribute="bottom" secondItem="FWy-5x-LLE" secondAttribute="bottom" constant="40" id="yeA-TS-gjX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="2HS-FQ-4T6">
@@ -103,7 +103,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-bU-btz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-bU-btz">
                                 <rect key="frame" x="57" y="108" width="300" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gNs-bU-btz" secondAttribute="height" multiplier="1:1.25" id="WHn-bS-IIG"/>
@@ -127,6 +127,7 @@
                             <constraint firstItem="gNs-bU-btz" firstAttribute="width" secondItem="txJ-3j-dr7" secondAttribute="height" multiplier="75:224" id="0ld-Fn-OLP"/>
                             <constraint firstItem="gNs-bU-btz" firstAttribute="top" secondItem="fTL-om-w5F" secondAttribute="top" constant="20" id="3WJ-Se-x4E"/>
                             <constraint firstItem="fTL-om-w5F" firstAttribute="trailing" secondItem="l2T-G3-nlp" secondAttribute="trailing" constant="20" id="77j-V6-HmU"/>
+                            <constraint firstItem="fTL-om-w5F" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="W67-lj-YWy" secondAttribute="bottom" constant="40" id="CRz-rn-dAf"/>
                             <constraint firstItem="gNs-bU-btz" firstAttribute="centerX" secondItem="txJ-3j-dr7" secondAttribute="centerX" id="Osg-sN-1eX"/>
                             <constraint firstItem="W67-lj-YWy" firstAttribute="top" secondItem="l2T-G3-nlp" secondAttribute="bottom" constant="12" id="du8-oH-s0S"/>
                             <constraint firstItem="l2T-G3-nlp" firstAttribute="top" secondItem="gNs-bU-btz" secondAttribute="bottom" constant="20" id="vmP-4d-SU0"/>
@@ -150,19 +151,19 @@
         <!--Photos-->
         <scene sceneID="OzG-D1-B6V">
             <objects>
-                <viewController id="9B7-05-m5K" sceneMemberID="viewController">
+                <viewController id="9B7-05-m5K" customClass="PhotoAlbumViewController" customModule="ShalginSR_HW2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="46Z-qa-Q5u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="o25-gQ-joG">
-                                <rect key="frame" x="20" y="128" width="374" height="285"/>
+                                <rect key="frame" x="20" y="128" width="374" height="665"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9DM-PJ-D1v">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="285"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="665"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksZ-pg-Fgk">
-                                        <rect key="frame" x="207" y="0.0" width="167" height="285"/>
+                                        <rect key="frame" x="207" y="0.0" width="167" height="665"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -170,13 +171,17 @@
                         <viewLayoutGuide key="safeArea" id="KM2-fi-lQm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o25-gQ-joG" firstAttribute="top" secondItem="KM2-fi-lQm" secondAttribute="top" constant="40" id="2Bj-DP-930"/>
-                            <constraint firstItem="KM2-fi-lQm" firstAttribute="bottom" secondItem="o25-gQ-joG" secondAttribute="bottom" constant="400" id="Vf4-8Z-Jcm"/>
+                            <constraint firstItem="o25-gQ-joG" firstAttribute="top" secondItem="KM2-fi-lQm" secondAttribute="top" constant="40" id="ShT-Ga-DjV"/>
                             <constraint firstItem="o25-gQ-joG" firstAttribute="leading" secondItem="KM2-fi-lQm" secondAttribute="leading" constant="20" id="Vsw-1g-i6R"/>
+                            <constraint firstItem="KM2-fi-lQm" firstAttribute="bottom" secondItem="o25-gQ-joG" secondAttribute="bottom" constant="20" id="gWr-ht-f6B"/>
                             <constraint firstAttribute="trailing" secondItem="o25-gQ-joG" secondAttribute="trailing" constant="20" id="z6t-WX-sjE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="yIe-F4-GwV"/>
+                    <connections>
+                        <outlet property="userPhoto2" destination="9DM-PJ-D1v" id="Ngh-4C-0BT"/>
+                        <outlet property="userPhoto3" destination="ksZ-pg-Fgk" id="AaG-2b-VdO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9W-jw-TJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,7 +363,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Elf-ny-vHp"/>
+        <segue reference="2TY-QL-JYq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>

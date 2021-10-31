@@ -8,7 +8,7 @@
 import UIKit
 
 class UserProfileViewController: UIViewController {
-
+    
     @IBOutlet var userPhoto: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -17,9 +17,18 @@ class UserProfileViewController: UIViewController {
     
     private let userData: UserData = UserData()
     
+    // Send imageName from UserProfileViewController to PhotoAlbumViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let userProfileViewController = segue.destination as? PhotoAlbumViewController {
+            userProfileViewController.imageName2 = userData.imageName2
+            userProfileViewController.imageName3 = userData.imageName3
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        userPhoto.image = UIImage(named: userData.imageName)
+        userPhoto.image = UIImage(named: userData.imageName1)
         nameLabel.text = "Name: " + userData.name
         surnameLabel.text = "Surname: " + userData.surname
         ageLabel.text = "Age: " + userData.age
