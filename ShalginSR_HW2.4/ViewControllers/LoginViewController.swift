@@ -9,51 +9,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // IB Outlets
+    // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var userPasswordTextField: UITextField!
     
-    // Private constants
+    // MARK: - Private Properties
     private let userData: UserData = UserData()
     
-    // Send userName from LoginViewController to WelcomeViewController
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as? UITabBarController
-        
-        guard let viewControllers = tabBarController?.viewControllers else { return }
-        
-        for viewController in viewControllers {
-            if let welcomeViewController = viewController as? WelcomeViewController {
-                welcomeViewController.userName = userData.name
-            }
-        }
-    }
-    
-    @IBAction func logInButton() {
-        
-        //Check optional input userName and Password
-        guard let inputUserName = userNameTextField.text,
-              let inputUserPassword = userPasswordTextField.text else {
-                  showAlert(title: "Wrong!", message: "Please, enter correct name")
-                  return
-              }
-        
-        //Check correctly input userName and password
-        guard inputUserName == userData.login, inputUserPassword == userData.password else {
-            showAlert(
-                title: "Invalid login or password",
-                message: "Please, enter correct login and password")
-            userPasswordTextField.text = ""
-            return
-        }
-    }
-    
-    @IBAction func userForgotRegisterData(_ sender: UIButton) {
-        sender.tag == 0
-        ? showAlert(title: "Ooops! \u{1F628}", message: "Your name is \(userData.login)")
-        : showAlert(title: "Ooops! \u{1F628}", message: "Your password is \(userData.password)")
-    }
-    
+    // MARK: - Login Screen Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +29,45 @@ class LoginViewController: UIViewController {
         userPasswordTextField.enablesReturnKeyAutomatically = true
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as? UITabBarController
+        
+        guard let viewControllers = tabBarController?.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeViewController = viewController as? WelcomeViewController {
+                welcomeViewController.userName = userData.name
+            }
+        }
+    }
+    
+    // MARK: - IB Actions
+    @IBAction func logInButton() {
+        
+        //Check optional input Login and Password
+        guard let inputUserName = userNameTextField.text,
+              let inputUserPassword = userPasswordTextField.text else {
+                  showAlert(title: "Wrong!", message: "Please, enter correct name")
+                  return
+              }
+        
+        //Check correctly input Login and Password
+        guard inputUserName == userData.login, inputUserPassword == userData.password else {
+            showAlert(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password"
+            )
+            userPasswordTextField.text = ""
+            return
+        }
+    }
+    
+    @IBAction func userForgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Ooops! \u{1F628}", message: "Your name is \(userData.login)")
+        : showAlert(title: "Ooops! \u{1F628}", message: "Your password is \(userData.password)")
+    }
     
     //Delete text in textfields when Log Out button pressed
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
@@ -74,13 +76,19 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK",
-                                     style: .default)
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default
+        )
         
         alert.addAction(okAction)
         present(alert, animated: true)
@@ -104,4 +112,3 @@ extension LoginViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
 }
-
