@@ -16,28 +16,25 @@ class UserProfileViewController: UIViewController {
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     
-    // MARK: - Private Properties
-    private let userData: UserData = UserData()
+    // MARK: - Public Properties
+    var user: User!
+    var userProfileInfo: UserProfileInfo!
     
     // MARK: - Override Properties
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userPhoto.image = UIImage(named: userData.imageName1)
+        userPhoto.image = UIImage(named: user.person.image)
         
-        nameLabel.text = "Name: " + userData.name
-        surnameLabel.text = "Surname: " + userData.surname
-        ageLabel.text = "Age: " + userData.age
+        nameLabel.text = "Name: " + user.person.name
+        surnameLabel.text = "Surname: " + user.person.surname
+        ageLabel.text = "Age: " + String(user.person.age)
         
-        navigationItem.title?.append(" " + userData.login)
+        navigationItem.title?.append(" " + user.login)
     }
     
-    // Send imageName from UserProfileViewController to PhotoAlbumViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let userProfileViewController = segue.destination as? PhotoAlbumViewController {
-            userProfileViewController.imageName2 = userData.imageName2
-            userProfileViewController.imageName3 = userData.imageName3
+        guard let photoAlbumViewController = segue.destination as? PhotoAlbumViewController else { return }
+        photoAlbumViewController.imageName = userProfileInfo
         }
-    }
-    
 }

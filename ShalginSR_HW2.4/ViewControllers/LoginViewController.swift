@@ -14,7 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var userPasswordTextField: UITextField!
     
     // MARK: - Private Properties
-    private let userData: UserData = UserData()
+    private let userData = User.getUserData()
+    private let userProfileInfo = UserProfileInfo.getUserProfileInfo()
     
     // MARK: - Login Screen Methods
     override func viewDidLoad() {
@@ -31,13 +32,21 @@ class LoginViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as? UITabBarController
-        
-        guard let viewControllers = tabBarController?.viewControllers else { return }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
         for viewController in viewControllers {
             if let welcomeViewController = viewController as? WelcomeViewController {
-                welcomeViewController.userName = userData.name
+                welcomeViewController.userName = userData
+            } else if let listOfFriendsViewController = viewController as? ListOfFriendsViewController {
+                listOfFriendsViewController.nameList = userProfileInfo
+            } else if let navigationViewController = viewController as? UINavigationController {
+                if let userProfileViewController = navigationViewController.topViewController as? UserProfileViewController {
+                    userProfileViewController.user = userData
+                    userProfileViewController.userProfileInfo = userProfileInfo
+                } else if let listOfFriendsViewController = navigationViewController.visibleViewController as? ListOfFriendsViewController {
+                    listOfFriendsViewController.nameList = userProfileInfo
+                }
             }
         }
     }

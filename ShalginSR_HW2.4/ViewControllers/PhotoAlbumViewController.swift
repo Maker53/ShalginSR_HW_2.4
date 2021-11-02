@@ -14,13 +14,12 @@ class PhotoAlbumViewController: UIViewController {
     @IBOutlet var userPhoto3: UIImageView!
     
     // MARK: - Public Properties
-    var imageName2 = ""
-    var imageName3 = ""
+    var imageName: UserProfileInfo!
     
     // MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        userPhoto2.image = UIImage(named: imageName2)
-        userPhoto3.image = UIImage(named: imageName3)
+        userPhoto2.image = UIImage(named: imageName.photoAlbum[0])
+        userPhoto3.image = UIImage(named: imageName.photoAlbum[1])
     }
 }

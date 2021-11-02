@@ -8,26 +8,50 @@
 import Foundation
 import UIKit
 
-// MARK: - User Data
-struct UserData {
-    // User info properties
-    let name = "Torax"
-    let surname = "Shalgin"
-    let age = "3 years"
+// MARK: - User
+struct User {
+    // User Data properties
+    var person: Person
+    let login: String
+    let password: String
     
-    // User login and password
-    let login = "ToraxTheDog"
-    let password = "Bones"
-    
-    // Images names in Assets
-    let imageName2 = "UserPhoto2"
-    let imageName3 = "UserPhoto3"
-    let imageName1 = "UserPhoto"
+    static func getUserData() -> User {
+        User(person: Person.getPerson(), login: "ToraxTheDog", password: "Bones")
+    }
 }
 
-// MARK: - Friends List
-struct FriendsList {
-    var friendsList: [FriendsName]
+// MARK: - Person
+struct Person {
+    
+    // User info properties
+    let name: String
+    let surname: String
+    var age: Int
+    var image: String
+    
+    static func getPerson() -> Person {
+        Person(name: "Torax", surname: "Shalgin", age: 3, image: "UserPhoto")
+    }
+}
+
+// MARK: - User Profile Info
+struct UserProfileInfo {
+    var photoAlbum: [String]
+    var friendsList: String
+    var friendsCount: Int
+    
+    static func getUserProfileInfo() -> UserProfileInfo {
+        UserProfileInfo(
+            photoAlbum: getPhotoName(),
+            friendsList: getFriendsList(),
+            friendsCount: getNumberOfFriends()
+        )
+    }
+}
+
+enum PhotoAlbum: String, CaseIterable {
+    case photo1 = "UserPhoto2"
+    case photo2 = "UserPhoto3"
 }
 
 enum FriendsName: String, CaseIterable {
@@ -37,8 +61,8 @@ enum FriendsName: String, CaseIterable {
     case bear = "Bear 🐻"
 }
 
-// MARK: - Extensions for Friends List
-extension FriendsList {
+// MARK: - Extensions for User Profile Info
+extension UserProfileInfo {
     static func getFriendsList() -> String {
         var nameList: String
         var nameArray: [String] = []
@@ -50,11 +74,20 @@ extension FriendsList {
         return nameList
     }
     
-    static func getNumberOfFriends() -> String {
+    static func getNumberOfFriends() -> Int {
         var nameArray: [String] = []
         for name in FriendsName.allCases {
             nameArray.append(name.rawValue)
         }
-        return String(nameArray.count)
+        return nameArray.count
+    }
+    
+    static func getPhotoName() -> [String] {
+        var photoNames: [String] = []
+        
+        for name in PhotoAlbum.allCases {
+            photoNames.append(name.rawValue)
+        }
+        return photoNames
     }
 }

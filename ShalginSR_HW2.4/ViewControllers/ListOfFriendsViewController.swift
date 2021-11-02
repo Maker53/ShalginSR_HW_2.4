@@ -10,16 +10,16 @@ import UIKit
 class ListOfFriendsViewController: UIViewController {
     
     // MARK: - IB Outlets
-    @IBOutlet var friendsListLabel: UILabel!
+    @IBOutlet var friendsList: UILabel!
     @IBOutlet var titleOfFriendsList: UILabel!
     
-    // MARK: - Private Properties
-    private var nameList: String = FriendsList.getFriendsList()
+    // MARK: - Public Properties
+    var nameList: UserProfileInfo!
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        friendsListLabel.text = nameList
-        titleOfFriendsList.text = "Friends (" + FriendsList.getNumberOfFriends() + ")"
+        friendsList.text = nameList.friendsList
+        titleOfFriendsList.text = "Friends (" + String(nameList.friendsCount) + ")"
     }
 }

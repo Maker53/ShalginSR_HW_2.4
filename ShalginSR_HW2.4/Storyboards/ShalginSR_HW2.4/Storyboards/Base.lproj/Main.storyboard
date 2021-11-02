@@ -307,7 +307,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GU4-zr-OaG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zma-RR-Ocp">
                                 <rect key="frame" x="20" y="148" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -317,11 +317,11 @@
                         <viewLayoutGuide key="safeArea" id="FR6-30-s36"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GU4-zr-OaG" firstAttribute="top" secondItem="bmg-Pj-sek" secondAttribute="bottom" constant="40" id="BzM-Ec-TQg"/>
+                            <constraint firstItem="FR6-30-s36" firstAttribute="trailing" secondItem="zma-RR-Ocp" secondAttribute="trailing" constant="20" id="66m-9y-coe"/>
                             <constraint firstItem="bmg-Pj-sek" firstAttribute="leading" secondItem="FR6-30-s36" secondAttribute="leading" constant="20" id="E9q-na-6oH"/>
                             <constraint firstItem="bmg-Pj-sek" firstAttribute="top" secondItem="FR6-30-s36" secondAttribute="top" constant="40" id="GDg-xF-UAu"/>
-                            <constraint firstItem="GU4-zr-OaG" firstAttribute="leading" secondItem="FR6-30-s36" secondAttribute="leading" constant="20" id="NXt-sI-MDh"/>
-                            <constraint firstItem="FR6-30-s36" firstAttribute="trailing" secondItem="GU4-zr-OaG" secondAttribute="trailing" constant="20" id="PE8-Wt-4rN"/>
+                            <constraint firstItem="zma-RR-Ocp" firstAttribute="top" secondItem="bmg-Pj-sek" secondAttribute="bottom" constant="40" id="SLz-9l-Sp8"/>
+                            <constraint firstItem="zma-RR-Ocp" firstAttribute="leading" secondItem="FR6-30-s36" secondAttribute="leading" constant="20" id="XWu-qJ-Hid"/>
                             <constraint firstItem="FR6-30-s36" firstAttribute="trailing" secondItem="bmg-Pj-sek" secondAttribute="trailing" constant="20" id="gtP-FV-jP2"/>
                         </constraints>
                     </view>
@@ -331,7 +331,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Friends" id="qvY-mc-qCo"/>
                     <connections>
-                        <outlet property="friendsListLabel" destination="GU4-zr-OaG" id="IhW-E2-6C7"/>
+                        <outlet property="friendsList" destination="zma-RR-Ocp" id="AMq-rq-G8W"/>
                         <outlet property="titleOfFriendsList" destination="bmg-Pj-sek" id="DZd-Py-5jj"/>
                     </connections>
                 </viewController>
