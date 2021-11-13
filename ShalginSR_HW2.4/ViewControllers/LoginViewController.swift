@@ -44,8 +44,6 @@ class LoginViewController: UIViewController {
                 if let userProfileViewController = navigationViewController.topViewController as? UserProfileViewController {
                     userProfileViewController.user = userData
                     userProfileViewController.userProfileInfo = userProfileInfo
-                } else if let listOfFriendsViewController = navigationViewController.visibleViewController as? ListOfFriendsViewController {
-                    listOfFriendsViewController.nameList = userProfileInfo
                 }
             }
         }
